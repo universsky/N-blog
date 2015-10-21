@@ -1,9 +1,43 @@
 <%- include header %>
-<form method="post">
-  用户名：  <input type="text" name="name"/><br />
-  密码：    <input type="password" name="password"/><br />
-  确认密码：<input type="password" name="password-repeat"/><br />
-  邮箱：    <input type="email" name="email"/><br />
-            <input type="submit" value="注册"/>
+<form method="post" class="form">
+
+		<div class="form-group">
+			 <label for="name" class="col-lg-5 control-label">
+			   用户名：  
+			 </label>
+			 <div class="col-lg-5">
+			  <input type="text" name="name"  placeholder="Username" class="form-control"/><br />
+			 </div>
+		</div>
+
+		<div class="form-group">
+		  	<label for="name" class="col-lg-5 control-label">
+		  	密码：
+			</label>
+			<div class="col-lg-5">
+			      <input type="password" name="password" placeholder="Password" class="form-control"/><br />
+			</div>
+		</div>
+
+		<div class="form-group">
+		      <label for="name" class="col-lg-5 control-label">
+		  	  确认密码：</label>
+
+			<div class="col-lg-5">
+			  	<input type="password" name="passwordConfirm" placeholder="Password Confirm" class="form-control"/><br />
+			</div>
+		</div>
+
+		<div class="form-group">
+		      <label for="name" class="col-lg-5 control-label" >
+		      邮箱：</label>
+			<div class="col-lg-5">
+			      <input type="email" name="email" placeholder="Email" class="form-control"/><br />
+			</div>
+		</div>
+
+		 <input type="submit" value="注册" class="btn btn-info active form-control"/>
+
 </form>
+
 <%- include footer %>

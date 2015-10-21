@@ -14,7 +14,7 @@ module.exports = function(app) {
         posts = [];
       } 
       res.render('index', {
-        title: '主页',
+        title: 'Tekrs开发者博客',
         posts: posts,
         page: page,
         isFirstPage: (page - 1) == 0,
@@ -40,7 +40,7 @@ module.exports = function(app) {
   app.post('/reg', function (req, res) {
     var name = req.body.name,
         password = req.body.password,
-        password_re = req.body['password-repeat'];
+        password_re = req.body['passwordConfirm'];
     //检验用户两次输入的密码是否一致
     if (password_re != password) {
       req.flash('error', '两次输入的密码不一致!'); 
@@ -161,7 +161,7 @@ module.exports = function(app) {
         return res.redirect('/');
       }
       res.render('archive', {
-        title: '存档',
+        title: '文章列表',
         posts: posts,
         user: req.session.user,
         success: req.flash('success').toString(),
@@ -218,7 +218,7 @@ module.exports = function(app) {
         return res.redirect('/');
       }
       res.render('search', {
-        title: "SEARCH:" + req.query.keyword,
+        title: "搜索文章:" + req.query.keyword,
         posts: posts,
         user: req.session.user,
         success: req.flash('success').toString(),

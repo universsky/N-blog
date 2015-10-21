@@ -1,7 +1,29 @@
 <%- include header %>
-<form method="post">
-  用户名：<input type="text" name="name"/><br />
-  密码：  <input type="password" name="password"/><br />
-          <input type="submit" value="登录"/>
+
+<form method="post" class="form" role="form" id="loginForm" >
+
+      <div class="form-group">
+	      <label class="control-label col-lg-5">用户名：</label>
+
+	      <div class="col-lg-5">
+	      	<input type="text" name="name" placeholder="Username or email" minlength="1" class="form-control" required/><br />
+	      </div>
+      </div>
+ 
+      <div class="form-group">
+	      <label class="control-label col-lg-5">密码：</label>
+	     	 <div class="col-lg-5">
+	      <input type="password" name="password" placeholder="Password" minlength="1" class="form-control" required /><br />
+	      </div>
+      </div>
+      <div class="form-group">
+      	<input type="submit" value="登录" class="btn btn-info active form-control"/>
+      </div>
+
 </form>
+
+<script>
+$("#loginForm").validate();
+</script>
+
 <%- include footer %>
